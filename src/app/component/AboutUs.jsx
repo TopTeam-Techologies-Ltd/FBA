@@ -2,11 +2,13 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <div className="grid grid-cols-12">
-      <div className="col-span-6 bg-[#027839] text-white p-16">
-        <h1 className="text-2xl font-medium mb-9">About Us</h1>
-
-        <p className="w-[90%] text-sm">
+    <div className="grid grid-cols-1 md:grid-cols-2">
+      {/* Left Section */}
+      <div className="bg-[#027839] text-white p-8 md:p-16">
+        <h1 className="text-2xl md:text-3xl font-medium mb-6 md:mb-9">
+          About Us
+        </h1>
+        <p className="text-sm md:text-base leading-6 md:leading-7">
           The Fatimah Bolanle Abioye Foundation (FBA Foundation) is a non-profit
           organization dedicated to transforming lives through educational
           empowerment and humanitarian aid in Nigeria. Named after Alhaja
@@ -15,15 +17,14 @@ const AboutUs = () => {
           continues her legacy of compassion and generosity.
         </p>
       </div>
-      <div className="col-span-6">
-        {" "}
-        <section
-          className="h-full w-full bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/aboutUs-img.png')",
-          }}
-        ></section>
-      </div>
+
+      {/* Right Section */}
+      <div
+        className="h-64 md:h-auto w-full bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/aboutUs-img.png')",
+        }}
+      ></div>
     </div>
   );
 };

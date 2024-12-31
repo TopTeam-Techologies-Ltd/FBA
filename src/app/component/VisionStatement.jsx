@@ -7,8 +7,8 @@ const VisionStatement = () => {
           Vision Statement
         </h1>
       </div>
-      <div>
-        <p className="w-[60%] mx-auto text-center text-sm">
+      <div className="mb-4">
+        <p className="w-[60%] mx-auto text-center text-base">
           To create a Nigeria where every youth has access to quality education
           and where socioeconomic barriers no longer determine one's future
           potential.
