@@ -112,7 +112,7 @@ export default function EnrollForm({ setOpen }) {
         // onSubmit={handleSubmit}
         className="w-[40rem] mx-auto p-6  rounded-lg mb-10 relative"
       >
-        <h1 className="text-center mb-6 p-2 bg-[#33af67] text-white font-semibold rounded-md">
+        <h1 className="text-center mb-6 p-2 bg-[#027839] text-white font-semibold rounded-md">
           Kindly Fill in the Information Below
         </h1>
         <div className="flex flex-col gap-4">
@@ -222,7 +222,7 @@ export default function EnrollForm({ setOpen }) {
           <button
             disabled={isSubmitting}
             type="submit"
-            className="bg-[#33af67] text-white p-3 rounded-md hover:bg-[#2a9c5a] transition-colors duration-300"
+            className="bg-[#027839] text-white p-3 rounded-md hover:bg-[#2a9c5a] transition-colors duration-300"
           >
             {isSubmitting ? "Submitting" : "Submit"}
           </button>
