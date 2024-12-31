@@ -10,10 +10,10 @@ const AboutUs = () => {
             About Us
           </h1>
           <p className="text-sm leading-6 md:leading-7">
-            The Fatimah Bolanle Abioye Foundation (FBA Foundation) is a
+            The Fatima Bolanle Abioye Foundation (FBA Foundation) is a
             non-profit organization dedicated to transforming lives through
             educational empowerment and humanitarian aid in Nigeria. Named after
-            Alhaja Fatimah Bolanle Abioye, whose lifelong commitment to helping
+            Alhaja Fatima Bolanle Abioye, whose lifelong commitment to helping
             others despite limited resources has inspired this initiative, our
             foundation continues her legacy of compassion and generosity.
           </p>

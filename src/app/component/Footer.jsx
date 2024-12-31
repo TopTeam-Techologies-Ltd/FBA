@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Text Section */}
         <div className="flex justify-center px-14">
           <h1 className="font-thin text-center text-base">
-            Join us in continuing Fatimah Bolanle Abioye's legacy of compassion
+            Join us in continuing Fatima Bolanle Abioye's legacy of compassion
             and generosity. Together, we can build a brighter future for Kwara
             State's youth and create lasting positive change in our communities.
           </h1>
