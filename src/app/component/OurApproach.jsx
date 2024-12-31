@@ -9,7 +9,7 @@ const OurApproach = () => {
         <h1 className="text-3xl sm:text-4xl font-semibold text-[#272727] mb-6">
             Our Approach
           </h1>
-          <p className="leading-relaxed text-sm sm:text-base lg:text-lg text-gray-700">
+          <p className="leading-relaxed text-base text-gray-700">
             The FBA Foundation employs a comprehensive approach to community
             development, recognizing that educational empowerment must go
             together with basic needs support. We work closely with local

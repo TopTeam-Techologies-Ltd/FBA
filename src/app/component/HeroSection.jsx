@@ -27,7 +27,7 @@ const HeroSection = () => {
               </h2>
               <br />
               <br />
-              <span className="text-lg text-white drop-shadow-md mb-3">
+              <span className="text-base text-white drop-shadow-md mb-3">
                 Empowering Through Education, Inspiring Through Compasion
               </span>
               <br />

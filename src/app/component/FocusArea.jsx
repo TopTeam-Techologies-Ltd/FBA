@@ -13,7 +13,7 @@ const FocusArea = () => {
             <h2 className="text-xl sm:text-2xl font-medium text-[#272727]">
               Educational Empowerment
             </h2>
-            <ul className="list-disc pl-5 space-y-4 text-gray-700 text-sm sm:text-base lg:text-lg">
+            <ul className="list-disc pl-5 space-y-4 text-gray-700 text-sm sm:text-base">
               <li>Scholarship programs for promising students</li>
               <li>Educational materials and resources provision</li>
               <li>

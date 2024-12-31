@@ -19,7 +19,7 @@ const CommunityAid = () => {
           <h1 className="text-3xl sm:text-4xl font-semibold text-[#272727] mb-6">
             Community Aid
           </h1>
-          <ul className="list-disc pl-5 space-y-4 text-gray-700 text-sm sm:text-base lg:text-lg">
+          <ul className="list-disc pl-5 space-y-4 text-gray-700 text-base">
             <li>Basic needs support for vulnerable families</li>
             <li>Healthcare assistance programs</li>
             <li>Emergency relief initiatives</li>

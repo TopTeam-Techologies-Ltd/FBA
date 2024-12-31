@@ -8,7 +8,7 @@ const AboutUs = () => {
         <h1 className="text-2xl md:text-3xl font-medium mb-6 md:mb-9">
           About Us
         </h1>
-        <p className="text-sm md:text-base leading-6 md:leading-7">
+        <p className="text-sm leading-6 md:leading-7">
           The Fatimah Bolanle Abioye Foundation (FBA Foundation) is a non-profit
           organization dedicated to transforming lives through educational
           empowerment and humanitarian aid in Nigeria. Named after Alhaja

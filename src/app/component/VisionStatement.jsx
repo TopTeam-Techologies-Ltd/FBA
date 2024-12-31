@@ -1,14 +1,14 @@
 import Image from "next/image";
 const VisionStatement = () => {
   return (
-    <div className="mt-20 flex flex-col gap-6">
+    <div className="my-20 flex flex-col gap-6">
       <div>
         <h1 className="text-4xl font-meduim text-center text-[#272727]">
           Vision Statement
         </h1>
       </div>
       <div className="mb-4">
-        <p className="w-[60%] mx-auto text-center text-base">
+        <p className="w-[60%] mx-auto text-center text-sm">
           To create a Nigeria where every youth has access to quality education
           and where socioeconomic barriers no longer determine one's future
           potential.
