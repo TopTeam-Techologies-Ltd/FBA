@@ -6,7 +6,7 @@ const OurApproach = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         {/* Text Section */}
         <div className="p-4 md:p-6 lg:p-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#272727] mb-6">
+        <h1 className="text-3xl sm:text-4xl font-semibold text-[#272727] mb-6">
             Our Approach
           </h1>
           <p className="leading-relaxed text-sm sm:text-base lg:text-lg text-gray-700">
