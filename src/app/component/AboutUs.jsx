@@ -20,7 +20,7 @@ const AboutUs = () => {
 
       {/* Right Section */}
       <div
-        className="h-64 md:h-auto w-full bg-cover bg-center"
+        className="h-[500px] w-full bg-cover bg-center"
         style={{
           backgroundImage: "url('/aboutUs-img.png')",
         }}
