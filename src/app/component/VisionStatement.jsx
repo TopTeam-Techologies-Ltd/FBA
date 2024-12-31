@@ -1,7 +1,7 @@
 import Image from "next/image";
 const VisionStatement = () => {
   return (
-    <div className="my-20 flex flex-col gap-6">
+    <div id="our-values" className="my-20 flex flex-col gap-6">
       <div>
         <h1 className="text-4xl font-meduim text-center text-[#272727]">
           Vision Statement

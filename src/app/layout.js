@@ -1,5 +1,5 @@
 import "./globals.css";
-
+import { ToastContainer } from "react-toastify";
 
 export const metadata = {
   title: "FBA Foundation",
@@ -10,6 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    <ToastContainer position="top-right" autoClose={3000} />
       <body>{children}</body>
     </html>
   );

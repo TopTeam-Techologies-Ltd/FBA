@@ -2,11 +2,14 @@ import Image from "next/image";
 
 const OurApproach = () => {
   return (
-    <div className="px-4 py-8 sm:px-6 md:px-12 lg:px-20 xl:px-28 mb-9">
+    <div
+      id="our-approach"
+      className="px-4 py-8 sm:px-6 md:px-12 lg:px-20 xl:px-28 mb-9"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         {/* Text Section */}
         <div className="p-4 md:p-6 lg:p-8">
-        <h1 className="text-3xl sm:text-4xl font-semibold text-[#272727] mb-6">
+          <h1 className="text-3xl sm:text-4xl font-semibold text-[#272727] mb-6">
             Our Approach
           </h1>
           <p className="leading-relaxed text-base text-gray-700">

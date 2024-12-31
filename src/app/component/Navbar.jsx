@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -19,14 +20,34 @@ const Navbar = () => {
           </div>
         </div>
         <div>
-          <ul className="flex space-x-8">
-            <li className="text-xs text-[#444444] font-medium">ABOUT US</li>
-            <li className="text-xs text-[#444444] font-medium">OUR VALUES</li>
-            <li className="text-xs text-[#444444] font-medium">
-              FOCUS AREAS
+          <ul className="flex space-x-10">
+            <li>
+              <Link href="#about-us">
+                <span className="text-xs text-[#444444] font-medium hover:text-[#000066]">
+                  ABOUT US
+                </span>
+              </Link>
             </li>
-            <li className="text-xs text-[#444444] font-medium">
-              OUR APPROACH
+            <li>
+              <Link href="#our-values">
+                <span className="text-xs text-[#444444] font-medium hover:text-[#000066]">
+                  OUR VALUES
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link href="#focus-areas">
+                <span className="text-xs text-[#444444] font-medium hover:text-[#000066]">
+                  FOCUS AREAS
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link href="#our-approach">
+                <span className="text-xs text-[#444444] font-medium hover:text-[#000066]">
+                  OUR APPROACH
+                </span>
+              </Link>
             </li>
           </ul>
         </div>
@@ -37,8 +58,8 @@ const Navbar = () => {
               color: "#027839",
             }}
           />
-          <p className="text-xs text-[#505050] font-semibold tracking-wide">
-            GET IN TOUCH
+          <p className="text-sm text-[#505050] font-semibold tracking-wide">
+            <a href="mailto:info@fbafound.org">Get in touch</a>
           </p>
         </div>
       </div>

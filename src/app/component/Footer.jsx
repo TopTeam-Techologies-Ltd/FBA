@@ -1,4 +1,5 @@
 import { Button } from "@mui/material";
+import SchorlashipModal from "./schorlashipModal";
 
 const Footer = () => {
   return (
@@ -15,17 +16,7 @@ const Footer = () => {
 
         {/* Button Section */}
         <div className="flex justify-center">
-          <Button
-            sx={{
-              backgroundColor: "#027839",
-              color: "#fff",
-              paddingY: ".7rem",
-              paddingX: "4rem",
-              border: "1px solid #FFB40A",
-            }}
-          >
-            Explore
-          </Button>
+          <SchorlashipModal />
         </div>
 
         {/* Copyright Section */}

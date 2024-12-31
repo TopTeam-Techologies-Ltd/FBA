@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2">
+    <div id="about-us" className="grid grid-cols-1 md:grid-cols-2">
       {/* Left Section */}
       <div className="bg-[#027839] text-white p-8 md:p-16">
         <h1 className="text-2xl md:text-3xl font-medium mb-6 md:mb-9">

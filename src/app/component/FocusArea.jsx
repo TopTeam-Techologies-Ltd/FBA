@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const FocusArea = () => {
   return (
-    <div className="px-4 py-8 my-14 sm:px-6 md:px-12 lg:px-20 xl:px-28">
+    <div id="focus-areas" className="px-4 py-8 my-14 sm:px-6 md:px-12 lg:px-20 xl:px-28">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         {/* Text Section */}
         <div className="p-4 md:p-6 lg:p-8">
