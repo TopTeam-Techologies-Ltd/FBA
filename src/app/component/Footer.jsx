@@ -1,5 +1,4 @@
-import { Button } from "@mui/material";
-import SchorlashipModal from "./schorlashipModal";
+import SchorlashipModal from "./SchorlashipModal";
 
 const Footer = () => {
   return (
