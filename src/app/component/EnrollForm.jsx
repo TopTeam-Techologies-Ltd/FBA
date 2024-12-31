@@ -44,18 +44,13 @@ const statesInNigeria = [
 ];
 
 export default function EnrollForm({ setOpen }) {
-  const [isApproved, setIsApproved] = useState(false);
   const [category, setCategory] = useState("");
-  const [type, setType] = useState("");
-  const [bedrooms, setBedrooms] = useState("");
-  const [budget, setBudgets] = useState("");
+  const [course, setCourse] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [name, setName] = useState("");
+  const [fullName, setFullName] = useState("");
   const [comment, setComment] = useState("");
-  const [typeofindividual, setTypeOfIndividual] = useState("");
   const [state, setState] = useState("");
-  const [tooltip, setTooltip] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -64,32 +59,26 @@ export default function EnrollForm({ setOpen }) {
     try {
       // Call the addPost function and await its result
       const response = await enrollSchorlaship(
-        bedrooms,
         comment,
-        budget,
         email,
         phoneNumber,
         category,
-        type,
-        typeofindividual,
         state,
-        name,
-        isApproved
+        fullName,
+        course
       );
       if (response.success) {
         // Reset form fields after successful submission
         setCategory("");
-        setType("");
+        setCourse("");
         setComment("");
-        setBedrooms("");
         setEmail("");
         setPhoneNumber("");
-        setBudgets("");
+        setFullName("");
         setState("");
-        setTypeOfIndividual("");
         // Display success message
         toast.success(
-          "Request submitted successfully! Your request will be uploaded after review."
+          "Request submitted successfully!"
         );
         // Close modal or perform other success actions
         setOpen(false);
@@ -109,7 +98,7 @@ export default function EnrollForm({ setOpen }) {
   return (
     <>
       <form
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
         className="w-[40rem] mx-auto p-6  rounded-lg mb-10 relative"
       >
         <h1 className="text-center mb-6 p-2 bg-[#027839] text-white font-semibold rounded-md">
@@ -132,8 +121,8 @@ export default function EnrollForm({ setOpen }) {
 
           {/* Type Dropdown */}
           <select
-            value={type}
-            onChange={(e) => setType(e.target.value)}
+            value={course}
+            onChange={(e) => setCourse(e.target.value)}
             required
             className="p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#33af67]"
           >
@@ -156,8 +145,8 @@ export default function EnrollForm({ setOpen }) {
             <input
               type="text"
               placeholder="Full Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
               required
               className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#33af67]"
             />
@@ -202,11 +191,6 @@ export default function EnrollForm({ setOpen }) {
               required
               className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#33af67]"
             />
-            {tooltip && (
-              <div className="absolute top-full mt-1 bg-gray-100 border border-gray-300 p-2 rounded-md shadow-md text-xs">
-                {tooltip}
-              </div>
-            )}
           </div>
 
           {/* Comment Textarea */}

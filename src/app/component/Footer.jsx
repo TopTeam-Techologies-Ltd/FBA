@@ -2,7 +2,7 @@ import SchorlashipModal from "./SchorlashipModal";
 
 const Footer = () => {
   return (
-    <footer className="px-4 py-12 bg-[#027839] text-white">
+    <footer className="px-4 py-20 bg-[#027839] text-white">
       <div className="flex flex-col gap-6">
         {/* Text Section */}
         <div className="flex justify-center px-14">

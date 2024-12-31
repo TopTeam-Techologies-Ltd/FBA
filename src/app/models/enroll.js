@@ -3,41 +3,33 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "./firebase";
 
 export async function enrollSchorlaship(
-  bedrooms,
   comment,
-  budget,
   email,
   phoneNumber,
   category,
-  type,
-  typeofindividual,
   state,
-  name,
-  isApproved
+  fullName,
+  course
 ) {
-  const postsCollection = collection(db, "post");
+  const postsCollection = collection(db, "enroll");
 
   try {
     // Attempt to add a new document to Firebase Firestore
     await addDoc(postsCollection, {
-      bedrooms,
       comment,
-      budget,
       email,
       phoneNumber,
       category,
-      type,
-      typeofindividual,
       state,
-      name,
-      isApproved,
+      fullName,
+      course,
       createdAt: serverTimestamp(),
     });
     // Optionally return success response or message
     return {
       success: true,
       message:
-        "Rquest submitted successfully!, your request will be passed for upload once it is reviewed",
+        "Rquest submitted successfully!",
     };
   } catch (error) {
     // Handle errors and log them
