@@ -59,9 +59,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="#our-approach">
+              <Link href="#scholarship">
                 <span className="text-xs text-[#444444] font-medium hover:text-[#000066]">
-                  OUR APPROACH
+                  SCHOLARSHIP
                 </span>
               </Link>
             </li>
