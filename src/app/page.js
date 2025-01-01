@@ -20,7 +20,7 @@ export default function Home() {
       <TechSkills />
       <OurApproach />
       {/* <GetInvolved /> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

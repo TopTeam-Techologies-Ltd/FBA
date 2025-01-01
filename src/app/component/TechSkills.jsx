@@ -61,7 +61,7 @@ const TechSkills = () => {
                   <CheckCircle fontSize="small" className="text-[#f5f5f5]" />{" "}
                   {/* Change to a suitable color */}
                   <p>
-                    <strong>50% Scholarship:</strong> Course fee slashed by 50%,
+                    <strong>65% Scholarship:</strong> Course fee slashed by 65%,
                     limited availability, No Interview required.
                   </p>
                 </li>

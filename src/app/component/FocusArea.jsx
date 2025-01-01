@@ -50,7 +50,7 @@ const FocusArea = () => {
         {/* Image Section */}
         <div className="hidden md:flex justify-center items-center">
           <Image
-            src={"/community-small.jpg"}
+            src={"/community-small.png"}
             alt="Focus Areas"
             height={400}
             width={400}
@@ -68,12 +68,17 @@ const FocusArea = () => {
             <li>Emergency relief initiatives</li>
             <li>Women and youth empowerment programs</li>
             <li>Community development projects</li>
+            <li>Access to clean water and sanitation</li>
+            <li>Education and vocational training for underprivileged youth</li>
+            <li>Environmental sustainability initiatives</li>
+            <li>Support for individuals with disabilities</li>
+            <li>Job creation and skills development programs</li>
           </ul>
         </div>
-          {/* Image Section */}
-          <div className="flex justify-center items-center md:hidden">
+        {/* Image Section */}
+        <div className="flex justify-center items-center md:hidden">
           <Image
-            src={"/community-small.jpg"}
+            src={"/community-small.png"}
             alt="Focus Areas"
             height={400}
             width={400}
