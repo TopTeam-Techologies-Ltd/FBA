@@ -132,7 +132,7 @@ const VisionStatement = () => {
                   <StarIcon sx={{ fontSize: 40, color: "#FFD700" }} />
                 </div>
                 <h1 className="font-medium text-start md:text-[#272727] md:text-center">
-                  Excellence:
+                  Excellence
                 </h1>
               </div>
               <p className="text-start md:text-center">

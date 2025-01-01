@@ -23,7 +23,7 @@ const TechSkills = () => {
           {/* Digital Literacy Section */}
           <div className="p-4 flex flex-col text-white gap-8 md:flex-row md:p-6 lg:p-8">
             <Image
-              src="/digital3.jpg"
+              src="/digital4.jpg"
               alt="Digital Literacy Program"
               width={400}
               height={400}
