@@ -10,7 +10,10 @@ import ScholarshipModal from "./ScholarshipModal";
 
 const TechSkills = () => {
   return (
-    <div id="scholarship" className="bg-[#027839] px-4 py-8 bg-cover bg-center sm:px-6 md:px-12 lg:px-20 xl:px-28">
+    <div
+      id="scholarship"
+      className="bg-[#027839] px-4 py-8 bg-cover bg-center sm:px-6 md:px-12 lg:px-20 xl:px-28"
+    >
       {/* Text Section */}
       <h1 className="text-2xl text-center sm:text-3xl font-thin text-[#F5F5F5] mb-8">
         OUR ACTIVITIES
@@ -31,10 +34,20 @@ const TechSkills = () => {
                 Digital Literacy Program
               </h2>
               <p className="text-sm text-[#F5F5F5]">
-                In partnership with TopTeamLtd, we offer digital literacy
-                training to Nigerians from various regions. The program is
-                divided into:
+                In partnership with{" "}
+                <a
+                  className="text-white hover:text-[#FFD700] font-semibold"
+                  target="_blank"
+                  href="https://www.topteamlimited.com/"
+                  rel="noopener noreferrer"
+                >
+                  TopTeamLtd
+                </a>
+                , we offer digital literacy scholarships worth over 10 million
+                naira to Nigerians from various regions. The program is divided
+                into:
               </p>
+
               <ul className="text-sm space-y-2">
                 <li className="flex items-center gap-2">
                   <CheckCircle fontSize="small" className="text-[#f5f5f5]" />{" "}
