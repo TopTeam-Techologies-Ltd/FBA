@@ -44,7 +44,7 @@ const VisionStatement = () => {
               <div className="flex justify-center md:hidden">
                 <SchoolIcon sx={{ fontSize: 40, marginBottom: "0.5rem" }} />
               </div>
-              <p>
+              <p className="text-black">
                 Providing educational opportunities and resources to
                 underprivileged youth in Nigeria
               </p>
@@ -71,7 +71,7 @@ const VisionStatement = () => {
               <div className="flex justify-center md:hidden">
                 <AutoGraphIcon sx={{ fontSize: 40, marginBottom: "0.5rem" }} />
               </div>
-              <p>
+              <p className="text-black">
                 Creating sustainable pathways out of poverty through knowledge
                 and skill development
               </p>

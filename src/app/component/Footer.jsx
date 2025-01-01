@@ -23,18 +23,24 @@ const Footer = () => {
               {/* social links */}
               <div className="flex items-center gap-3 mt-2">
                 {/* Social Media Icons */}
-                <IconButton aria-label="WhatsApp">
-                  <WhatsApp fontSize="small" sx={{ color: "white" }} />
-                </IconButton>
-                <IconButton aria-label="WhatsApp">
-                  <XIcon fontSize="small" sx={{ color: "white" }} />
-                </IconButton>
-                <IconButton aria-label="Instagram">
-                  <Instagram fontSize="small" sx={{ color: "white" }} />
-                </IconButton>
-                <IconButton aria-label="Instagram">
-                  <LinkedIn fontSize="small" sx={{ color: "white" }} />
-                </IconButton>
+                <a
+                  href="https://x.com/fbafound"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconButton aria-label="WhatsApp">
+                    <XIcon fontSize="small" sx={{ color: "white" }} />
+                  </IconButton>
+                </a>
+                <a
+                  href="https://www.instagram.com/fbafound"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconButton aria-label="Instagram">
+                    <Instagram fontSize="small" sx={{ color: "white" }} />
+                  </IconButton>
+                </a>
               </div>
             </div>
           </div>
