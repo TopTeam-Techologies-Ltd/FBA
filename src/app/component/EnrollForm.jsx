@@ -78,7 +78,7 @@ export default function EnrollForm({ setOpen }) {
         setState("");
         // Display success message
         toast.success(
-          "Request submitted successfully!"
+          "Request submitted successfully, kindly check your mail inbox regularly for our reply. Best of Luck!"
         );
         // Close modal or perform other success actions
         setOpen(false);

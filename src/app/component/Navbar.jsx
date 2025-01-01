@@ -18,11 +18,24 @@ const Navbar = () => {
             <p className="text-xs font-medium">The Fatima Bolanle Abioye Foundation</p>
           </div>
         </div>
+        {/* <div className="flex item-center gap-2">
+          <Image
+            src={"/logo.png"}
+            alt="Foundation Building Africa Logo"
+            width={80}
+            height={50}
+          />
+          <div>
+            <p className="font-bold text-[#000066] text-xl">FBA</p>
+            <p className="font-semibold text-[#000066] text-sm">Foundation</p>
+            <p className="text-xs font-medium">The Fatima Bolanle Abioye Foundation</p>
+          </div>
+        </div> */}
         {/* testing something here */}
         {/* <div className="h-[60px] w-[200px] bg-[url('/fba-logo3.jpg')] bg-cover bg-center bg-no-repeat"></div> */}
         {/* <div className="h-[60px] w-[200px] bg-[url('/fba-logo2.png')] bg-cover bg-center bg-no-repeat"></div> */}
 
-        <div>
+        <div className="hidden lg:block">
           <ul className="flex space-x-10">
             <li>
               <Link href="#about-us">
@@ -55,7 +68,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1 border rounded-md border-[#027839] p-2 ">
           <FiberManualRecordIcon
             fontSize="small"
             sx={{

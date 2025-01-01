@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="px-20 pt-10 pb-5 bg-[#027839] text-white">
+    <footer className="px-10 pt-10 pb-5 bg-[#027839] text-white md:px-20 ">
       <div className="flex flex-col gap-6">
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-12 gap-5">
           <div className="col-span-12 md:col-span-4">
             <div className="flex flex-col gap-2">
               <div className="h-[100px] w-[150px] bg-[url('/fba-logo3.jpg')] bg-cover bg-center bg-no-repeat"></div>
@@ -38,7 +38,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-12 flex justify-center md:col-span-4">
+          <div className="col-span-12 flex justify-start md:justify-center md:col-span-4">
             <div className="flex flex-col gap-4">
               <div className="">
                 <h1 className="font-medium text-base">Quick Links</h1>
@@ -69,7 +69,7 @@ const Footer = () => {
                   <li>
                     <Link href="#our-values">
                       <span className="text-white hover:text-[#FFD700]">
-                        Vision
+                        Our Vision
                       </span>
                     </Link>
                   </li>

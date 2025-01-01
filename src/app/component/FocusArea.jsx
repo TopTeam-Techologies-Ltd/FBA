@@ -52,8 +52,8 @@ const FocusArea = () => {
           <Image
             src={"/community-small.png"}
             alt="Focus Areas"
-            height={400}
-            width={400}
+            height={300}
+            width={300}
             className="w-full h-full rounded-md"
           />
         </div>

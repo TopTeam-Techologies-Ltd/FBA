@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -26,18 +26,33 @@ export default function ScholarshipModal() {
 
   return (
     <div>
-      <Button
-        onClick={handleOpen}
-        sx={{
-          backgroundColor: "#027839",
-          color: "#fff",
-          paddingY: ".7rem",
-          paddingX: "4rem",
-          border: "1px solid #FFD700",
-        }}
-      >
-        Apply for scholarship
-      </Button>
+      <div className="hidden md:block">
+        <Button
+          onClick={handleOpen}
+          sx={{
+            backgroundColor: "#027839",
+            color: "#fff",
+            paddingY: ".7rem",
+            paddingX: "4rem",
+            border: "1px solid #FFD700",
+          }}
+        >
+          Apply for scholarship
+        </Button>
+      </div>
+      <div className="flex justify-center mt-6 md:hidden">
+        <Button
+          size="small"
+          sx={{
+            backgroundColor: "#027839",
+            color: "#fff",
+            padding: ".4rem",
+            border: "1px solid #FFD700",
+          }}
+        >
+          Apply for scholarship
+        </Button>
+      </div>
       <Modal
         open={open}
         onClose={handleClose}

@@ -29,7 +29,7 @@ export async function enrollscholarship(
     return {
       success: true,
       message:
-        "Rquest submitted successfully!",
+        "Request submitted successfully, kindly check your mail inbox regularly for our reply. Best of Luck!",
     };
   } catch (error) {
     // Handle errors and log them
