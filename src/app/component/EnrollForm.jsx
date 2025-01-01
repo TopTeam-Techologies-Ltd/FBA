@@ -99,7 +99,7 @@ export default function EnrollForm({ setOpen }) {
     <>
       <form
         onSubmit={handleSubmit}
-        className="w-[40rem] mx-auto p-6  rounded-lg mb-10 relative"
+        className="w-[80%] mx-auto md:w-[40rem] md:mx-auto md:p-6  rounded-lg"
       >
         <h1 className="text-center mb-6 p-2 bg-[#027839] text-white font-semibold rounded-md">
           Kindly Fill in the Information Below

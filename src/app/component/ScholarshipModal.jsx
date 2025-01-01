@@ -42,6 +42,7 @@ export default function ScholarshipModal() {
       </div>
       <div className="flex justify-center mt-6 md:hidden">
         <Button
+           onClick={handleOpen}
           size="small"
           sx={{
             backgroundColor: "#027839",
