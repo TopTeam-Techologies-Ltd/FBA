@@ -55,7 +55,7 @@ const Footer = () => {
                   <li>
                     <Link href="#focus-areas">
                       <span className="text-white hover:text-[#FFD700]">
-                        Focus Area
+                        Focus Areas
                       </span>
                     </Link>
                   </li>
