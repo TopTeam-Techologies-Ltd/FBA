@@ -1,55 +1,122 @@
 import Image from "next/image";
+import {
+  CheckCircle,
+  Lock,
+  LaptopMac,
+  BarChart,
+  CloudUpload,
+} from "@mui/icons-material";
+import ScholarshipModal from "./ScholarshipModal";
 
 const TechSkills = () => {
   return (
-    <div className="px-4 py-12 bg-[#027839]">
+    <div id="scholarship" className="bg-[#027839] px-4 py-8 bg-cover bg-center sm:px-6 md:px-12 lg:px-20 xl:px-28">
       {/* Text Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="p-6">
-          <p className="text-2xl sm:text-3xl font-medium text-white">
-            FBA got you covered to get those tech skills
-          </p>
+      <h1 className="text-2xl text-center sm:text-3xl font-thin text-[#F5F5F5] mb-8">
+        OUR ACTIVITIES
+      </h1>
+      <div className="">
+        <div className="flex flex-col gap-10">
+          {/* Digital Literacy Section */}
+          <div className="p-4 flex flex-col text-white gap-8 md:flex-row md:p-6 lg:p-8">
+            <Image
+              src="/digital3.jpg" // Replace this with your chosen image
+              alt="Digital Literacy Program"
+              width={400}
+              height={400}
+              className="rounded-lg shadow-lg"
+            />
+            <div className="flex flex-col gap-2">
+              <h2 className="text-xl font-semibold text-start text-[#F5F5F5]">
+                Digital Literacy Program
+              </h2>
+              <p className="text-sm text-[#F5F5F5]">
+                In partnership with TopTeamLtd, we offer digital literacy
+                training to Nigerians from various regions. The program is
+                divided into:
+              </p>
+              <ul className="text-sm space-y-2">
+                <li className="flex items-center gap-2">
+                  <CheckCircle fontSize="small" className="text-[#f5f5f5]" />{" "}
+                  {/* Change to a suitable color */}
+                  <p>
+                    <strong>100% Scholarship:</strong> Limited spots available,
+                    Interview required upon application.
+                  </p>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle fontSize="small" className="text-[#f5f5f5]" />{" "}
+                  {/* Change to a suitable color */}
+                  <p>
+                    <strong>50% Scholarship:</strong> Course fee slashed by 50%,
+                    limited availability, No Interview required.
+                  </p>
+                </li>
+              </ul>
+              <h3 className="text-lg font-semibold mt-4">Courses Offered:</h3>
+              <ul className="text-sm space-y-2 mt-2">
+                <li className="flex items-center gap-2">
+                  <Lock className="text-[#f5f5f5] " />{" "}
+                  {/* Icon for Cybersecurity */}
+                  <p>Cybersecurity</p>
+                </li>
+                <li className="flex items-center gap-2">
+                  <LaptopMac className="text-[#f5f5f5] " />{" "}
+                  {/* Icon for Software Development */}
+                  <p>Software Development</p>
+                </li>
+                <li className="flex items-center gap-2">
+                  <BarChart className="text-[#f5f5f5] " />{" "}
+                  {/* Icon for Data Analysis */}
+                  <p>Data Analysis</p>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CloudUpload className="text-[#f5f5f5] " />{" "}
+                  {/* Icon for Cloud Computing with AWS */}
+                  <p>Cloud Computing with AWS</p>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CloudUpload className="text-[#f5f5f5] " />{" "}
+                  {/* Icon for Cloud Computing with Azure */}
+                  <p>Cloud Computing with Azure</p> and more.
+                </li>
+              </ul>
+              <ScholarshipModal />
+            </div>
+          </div>
+          {/* Feeding the Poor Section */}
+          {/* <div className="p-4 flex flex-col text-white gap-8 md:flex-row md:p-6 lg:p-8">
+            <Image
+              src="/feeding2.jpg" // Replace this with your chosen image
+              alt="Feeding the Poor Program"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-lg"
+            />
+            <div className="flex flex-col gap-2">
+              <h2 className="text-xl font-semibold">Feeding the Poor</h2>
+              <p className="text-sm text-center">
+                Our partnership program focuses on providing essential support
+                to vulnerable families in need by:
+              </p>
+              <ul className="text-sm space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="h-2 w-2 bg-white rounded-full mt-1"></span>
+                  <p>Delivering food packages to families in crisis.</p>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="h-2 w-2 bg-white rounded-full mt-1"></span>
+                  <p>
+                    Ensuring nutritious meals for underprivileged communities.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div> */}
         </div>
-        <div className="p-6">
-          <p className="text-sm  text-white leading-6">
-            Whether you are just starting out or looking to take your abilities
-            to the next level, our mission is to provide you with the resources
-            and support you need to succeed. We understand that the cost of
-            education and training can be a barrier, and we are here to
-            eliminate that roadblock.
-          </p>
-        </div>
-      </div>
-
-      {/* Skills Section */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-10">
-        <SkillCard
-          src="/data.png"
-          alt="Data Analytics"
-          label="Data Analytics"
-        />
-        <SkillCard src="/cyber.png" alt="Cybersecurity" label="Cybersecurity" />
-        <SkillCard
-          src="/software.png"
-          alt="Software Development"
-          label="Software Development"
-        />
-        <SkillCard src="/design.png" alt="Design Field" label="Design Field" />
-        <SkillCard
-          src="/cloud.png"
-          alt="Cloud Engineering"
-          label="Cloud Engineering"
-        />
       </div>
     </div>
   );
 };
-
-const SkillCard = ({ src, alt, label }) => (
-  <div className="flex items-center justify-center gap-2 bg-[#02C27F] py-3 px-4 rounded-md">
-    <Image src={src} alt={alt} height={30} width={30} />
-    <h1 className="text-white text-sm">{label}</h1>
-  </div>
-);
 
 export default TechSkills;

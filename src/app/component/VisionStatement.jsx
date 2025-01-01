@@ -1,9 +1,12 @@
 import Image from "next/image";
 const VisionStatement = () => {
   return (
-    <div id="our-values" className="my-20 flex flex-col gap-6">
+    <div
+      id="our-values"
+      className="h-[40rem] flex flex-col justify-center gap-6 bg-[#F5F5F5]"
+    >
       <div>
-        <h1 className="text-4xl font-meduim text-center text-[#272727]">
+        <h1 className="text-3xl font-meduim text-center text-[#272727]">
           Vision Statement
         </h1>
       </div>
@@ -36,7 +39,7 @@ const VisionStatement = () => {
           <div className="col-span-3 p-2 border-r border-b border-[#027839] flex justify-center items-center text-center">
             Supporting vulnerable communities through targeted aid programs
           </div>
-          <div className="col-span-3 p-2 border-b border-[#027839] flex justify-center items-center text-center">
+          <div className="col-span-3 p-2 border-b border-[#027839] bg-[#FFB50A] flex justify-center items-center text-center">
             Creating sustainable pathways out of poverty through knowledge and
             skill development
           </div>
@@ -66,7 +69,7 @@ const VisionStatement = () => {
               </p>
             </div>
           </div>
-          <div className="col-span-3 p-2 border-r border-[#027839]">
+          <div className="col-span-3 p-2 border-r border-[#027839] bg-[#FFB50A]">
             <div className="flex flex-col gap-2">
               <h1 className="font-medium text-[#272727] text-center">
                 Integrity:

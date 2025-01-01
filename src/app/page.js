@@ -18,10 +18,9 @@ export default function Home() {
       <VisionStatement />
       <FocusArea />
       <TechSkills />
-      <CommunityAid />
       <OurApproach />
-      <GetInvolved />
-      <Footer />
+      {/* <GetInvolved /> */}
+      {/* <Footer /> */}
     </>
   );
 }

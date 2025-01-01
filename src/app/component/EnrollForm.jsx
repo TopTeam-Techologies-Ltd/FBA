@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { enrollSchorlaship } from "../models/enroll";
+import { enrollscholarship } from "../models/enroll";
 import { toast } from "react-toastify";
 
 const statesInNigeria = [
@@ -58,7 +58,7 @@ export default function EnrollForm({ setOpen }) {
     setIsSubmitting(true); // Step 2: Set isSubmitting to true when submission starts
     try {
       // Call the addPost function and await its result
-      const response = await enrollSchorlaship(
+      const response = await enrollscholarship(
         comment,
         email,
         phoneNumber,

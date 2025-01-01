@@ -1,4 +1,4 @@
-import SchorlashipModal from "./SchorlashipModal";
+import ScholarshipModal from "./ScholarshipModal";
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
 
         {/* Button Section */}
         <div className="flex justify-center">
-          <SchorlashipModal />
+          <ScholarshipModal />
         </div>
 
         {/* Copyright Section */}
