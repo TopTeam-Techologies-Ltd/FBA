@@ -38,7 +38,7 @@ const TechSkills = () => {
                 <a
                   className="text-white hover:text-[#FFD700] font-semibold"
                   target="_blank"
-                  href="https://www.topteamlimited.com/"
+                  href="https://www.topteamlimited.com/training"
                   rel="noopener noreferrer"
                 >
                   TopTeamLtd
