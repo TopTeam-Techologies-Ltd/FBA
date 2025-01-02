@@ -51,7 +51,7 @@ const TechSkills = () => {
               <ul className="text-sm space-y-4">
                 <li className="flex items-start gap-2">
                   <CheckCircle fontSize="small" className="text-[#f5f5f5]" />
-                  <p>
+                  <p className="line-through">
                     <strong>100% Scholarship:</strong> Limited spots available,
                     Interview required upon application.
                   </p>

@@ -108,7 +108,7 @@ export default function EnrollForm({ setOpen }) {
         <div className="flex items-center justify-center mb-6">
           <PriorityHighIcon sx={{ color: "red" }} />
           <span className="text-sm text-red-500">
-            The allocation for fully funded scholarships is at capacity.
+            Allocation for fully funded scholarships is currently at capacity.
           </span>
         </div>
         <div className="flex flex-col gap-4">
