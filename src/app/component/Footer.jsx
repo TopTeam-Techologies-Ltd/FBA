@@ -98,8 +98,8 @@ const Footer = () => {
                   </li>
                   <li>
                     <span className="text-white">
-                      <span className="font-medium">Tel</span>: +234 806 869
-                      96363
+                      <span className="font-medium">Tel</span>: +234 806 499
+                      1479
                     </span>
                   </li>
                   <li>
