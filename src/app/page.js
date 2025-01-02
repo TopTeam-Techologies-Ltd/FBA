@@ -4,14 +4,14 @@ import AboutUs from "./component/AboutUs";
 import VisionStatement from "./component/VisionStatement";
 import FocusArea from "./component/FocusArea";
 import TechSkills from "./component/TechSkills";
-import CommunityAid from "./component/CommunityAid";
 import OurApproach from "./component/OurApproach";
-import GetInvolved from "./component/GetInvolved";
 import Footer from "./component/Footer";
+import PromotionModal from "./component/PromotionModal";
 
 export default function Home() {
   return (
     <>
+      <PromotionModal />
       <Navbar />
       <HeroSection />
       <AboutUs />

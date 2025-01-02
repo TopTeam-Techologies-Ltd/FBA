@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { enrollscholarship } from "../models/enroll";
 import { toast } from "react-toastify";
+import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 
 const statesInNigeria = [
   "Abia",
@@ -104,6 +105,11 @@ export default function EnrollForm({ setOpen }) {
         <h1 className="text-center mb-6 p-2 bg-[#027839] text-white font-semibold rounded-md">
           Kindly Fill in the Information Below
         </h1>
+        <div className="flex items-center justify-center mb-6">
+          <PriorityHighIcon sx={{ color: "red" }} />
+          <span className="text-sm text-red-500">The allocation for fully funded scholarships is at capacity.</span>
+
+        </div>
         <div className="flex flex-col gap-4">
           {/* Category Dropdown */}
           <select
@@ -115,7 +121,9 @@ export default function EnrollForm({ setOpen }) {
             <option value="" disabled>
               Select Category
             </option>
-            <option value="full funded">Full Funded Scholarship</option>
+            <option value="full funded" disabled>
+              Full Funded Scholarship
+            </option>
             <option value="half fundde">Partly Funded Scholarship</option>
           </select>
 
