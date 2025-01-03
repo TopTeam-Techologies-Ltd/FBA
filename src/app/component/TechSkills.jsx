@@ -81,11 +81,11 @@ const TechSkills = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CloudUpload className="text-[#f5f5f5]" />
-                  <p>Cloud Computing with AWS</p>
+                  <p className="line-through">Cloud Computing with AWS</p>
                 </li>
                 <li className="flex items-start gap-2">
                   <CloudUpload className="text-[#f5f5f5]" />
-                  <p>Cloud Computing with Azure and more.</p>
+                  <p>Cloud Computing with Azure</p>
                 </li>
               </ul>
               <ScholarshipModal />

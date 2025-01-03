@@ -63,6 +63,28 @@ const Page = () => {
     fetchData();
   }, []);
 
+  const getHighestApplications = (enrollments) => {
+    const courseCount = {};
+    const stateCount = {};
+    // Count occurrences of each course and state
+    enrollments.forEach(({ course, state }) => {
+      courseCount[course] = (courseCount[course] || 0) + 1;
+      stateCount[state] = (stateCount[state] || 0) + 1;
+    });
+    // Find the course with the highest applications
+    const topCourse = Object.entries(courseCount).reduce(
+      (max, [course, count]) => (count > max.count ? { course, count } : max),
+      { course: null, count: 0 }
+    );
+    // Find the state with the highest applications
+    const topState = Object.entries(stateCount).reduce(
+      (max, [state, count]) => (count > max.count ? { state, count } : max),
+      { state: null, count: 0 }
+    );
+    return { topCourse, topState };
+  };
+  const result = getHighestApplications(enrollments);
+
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <div className="flex flex-col gap-4 w-full px-4">
@@ -95,7 +117,7 @@ const Page = () => {
           <p className="flex justify-center">Loading....</p>
         ) : (
           <div className="w-[90%] mx-auto overflow-x-auto">
-            <BasicTable enrollments={enrollments} />
+            <BasicTable enrollments={enrollments} result={result} />
           </div>
         )}
       </div>

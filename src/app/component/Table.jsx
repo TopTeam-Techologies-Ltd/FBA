@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
-export default function BasicTable({ enrollments }) {
+export default function BasicTable({ enrollments, result }) {
   const totalRegisteredApplicants = enrollments.length;
   const fullyFundedApplicants = enrollments.filter(
     (enrollment) => enrollment.category === "full funded"
@@ -47,6 +47,18 @@ export default function BasicTable({ enrollments }) {
             >
               <TableCell>Partial Funded Scholarship Applicants</TableCell>
               <TableCell>{partiallyFundedApplicants}</TableCell>
+            </TableRow>
+            <TableRow
+              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+            >
+              <TableCell>Course with highest Applicants</TableCell>
+              <TableCell>{result.topCourse.course +" "+ result.topCourse.count}</TableCell>
+            </TableRow>
+            <TableRow
+              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+            >
+              <TableCell>State with highest Applicants</TableCell>
+              <TableCell>{result.topState.state+" "+result.topState.count}</TableCell>
             </TableRow>
           </TableBody>
         </Table>
