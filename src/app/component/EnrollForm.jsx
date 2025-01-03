@@ -52,6 +52,7 @@ export default function EnrollForm({ setOpen }) {
   const [fullName, setFullName] = useState("");
   const [comment, setComment] = useState("");
   const [state, setState] = useState("");
+  const [following, setFollowing] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -66,12 +67,14 @@ export default function EnrollForm({ setOpen }) {
         category,
         state,
         fullName,
-        course
+        course,
+        following
       );
       if (response.success) {
         // Reset form fields after successful submission
         setCategory("");
         setCourse("");
+        setFollowing("");
         setComment("");
         setEmail("");
         setPhoneNumber("");
@@ -156,8 +159,8 @@ export default function EnrollForm({ setOpen }) {
 
           {/* Following Dropdown */}
           <select
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
+            value={following}
+            onChange={(e) => setFollowing(e.target.value)}
             required
             className="p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#33af67]"
           >
