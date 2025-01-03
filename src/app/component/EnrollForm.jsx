@@ -150,6 +150,22 @@ export default function EnrollForm({ setOpen }) {
             </option>
           </select>
 
+          {/* Following Dropdown */}
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            required
+            className="p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#33af67]"
+          >
+            <option value="" disabled>
+              Are you following us on all social media platforms?
+            </option>
+            <option value="yes">
+              yes
+            </option>
+            <option value="no">No</option>
+          </select>
+
           {/* Name Field with Tooltip */}
           <div>
             <input
