@@ -41,11 +41,11 @@ const TechSkills = () => {
                   href="https://www.topteamlimited.com/training"
                   rel="noopener noreferrer"
                 >
-                  TopTeamLtd
+                  Topteam Technologies Limited
                 </a>
-                , we offer digital literacy scholarships worth over 10 million
-                naira to Nigerians from various regions. The program is divided
-                into:
+                 {" "}a Uk based tech giant, we offer digital literacy scholarships
+                worth over 10 million naira to Nigerians from various regions.
+                The program is divided into:
               </p>
 
               <ul className="text-sm space-y-4">
