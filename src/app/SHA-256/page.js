@@ -85,13 +85,13 @@ const Page = () => {
   };
   const result = getHighestApplications(enrollments);
 
-  // const uncategorized = enrollments.filter(
-  //   (enrollment) =>
-  //     enrollment.category?.trim().toLowerCase() !== "full funded" &&
-  //     enrollment.category?.trim().toLowerCase() !== "half fundde"
-  // );
+  const uncategorized = enrollments.filter(
+    (enrollment) =>
+      enrollment.category?.trim().toLowerCase() !== "full funded" &&
+      enrollment.category?.trim().toLowerCase() !== "half fundde"
+  );
 
-  // console.log("Uncategorized Entries:", uncategorized);
+  console.log("Uncategorized Entries:", uncategorized);
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">

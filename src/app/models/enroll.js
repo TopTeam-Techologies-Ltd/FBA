@@ -9,7 +9,8 @@ export async function enrollscholarship(
   category,
   state,
   fullName,
-  course
+  course,
+  following
 ) {
   const postsCollection = collection(db, "enroll");
 
@@ -24,6 +25,7 @@ export async function enrollscholarship(
       fullName,
       course,
       createdAt: serverTimestamp(),
+      following
     });
     // Optionally return success response or message
     return {
