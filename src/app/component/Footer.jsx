@@ -41,6 +41,15 @@ const Footer = () => {
                     <Instagram fontSize="small" sx={{ color: "white" }} />
                   </IconButton>
                 </a>
+                <a
+                  href="https://wa.me/2348064991479?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20your%20services.%20I%20am%20reaching%20out%20from%20your%20website."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconButton aria-label="WhatsApp">
+                    <WhatsApp fontSize="small" sx={{ color: "white" }} />
+                  </IconButton>
+                </a>
               </div>
             </div>
           </div>

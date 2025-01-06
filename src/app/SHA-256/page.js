@@ -6,6 +6,7 @@ import { getEnrollment } from "../models/getEnrollment";
 import { useState, useEffect } from "react";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import IconButton from "@mui/material/IconButton";
+import Link from "next/link";
 // Function to convert JSON to CSV
 const convertToCSV = (data) => {
   const header = [
@@ -286,6 +287,13 @@ const Page = () => {
         ) : (
           <div className="w-[90%] mx-auto overflow-x-auto">
             <BasicTable enrollments={enrollments} result={result} />
+            <div className="flex justify-center mt-10">
+              <Link href={"/SHA-256/admin"}>
+                <Button variant="contained" color="success">
+                  Go to Admin
+                </Button>
+              </Link>
+            </div>
           </div>
         )}
       </div>
