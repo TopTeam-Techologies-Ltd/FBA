@@ -35,7 +35,16 @@ const convertToCSV = (data) => {
 
 // Function to trigger CSV download
 const downloadCSV = (data) => {
-  const csv = convertToCSV(data);
+  // Sort data by createdAt field in ascending order
+  const sortedData = data.sort((a, b) => {
+    // Convert Timestamp to Date object for proper comparison
+    const dateA = new Date(a.createdAt.seconds * 1000); // converting seconds to milliseconds
+    const dateB = new Date(b.createdAt.seconds * 1000); // converting seconds to milliseconds
+
+    return dateA - dateB;
+  });
+
+  const csv = convertToCSV(sortedData);
   const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
   const link = document.createElement("a");
   if (link.download !== undefined) {
@@ -45,6 +54,157 @@ const downloadCSV = (data) => {
     link.click();
   }
 };
+
+// const arrayA = [
+//   "ibrahimhosny360@gmail.com",
+//   "johnmuhammed231@gmail.com",
+//   "ifekunola@gmail.com",
+//   "sulymanibraheem6@gmail.com",
+//   "ajayimade1@gmail.com",
+//   "olatunjifasasi@gmail.com",
+//   "adebayobolarinwa29@gmail.com",
+//   "johnmuhammed231@gmail.com",
+//   "khaleelshot@gmail.com",
+//   "bolakaleshehu@gmail.com",
+//   "funmiadamsonjnr@gmail.com",
+//   "sojcomtech@gmail.com",
+//   "abdussalama142@gmail.com",
+//   "ibrahimyahayaoloriegbe7@gmail.com",
+//   "adamasani@gmail.com",
+//   "koladesowunmi62@gmail.com",
+//   "skddkdh@gmail.com",
+//   "damilareswift@gmail.com",
+//   "muhdabdullahi000@gmail.com",
+//   "olamideibrahim511@gmail.com",
+//   "mubarakawwal655@gmail.com",
+//   "abdulqudusluqman@gmail.com",
+//   "olawale16644@gmail.com",
+//   "olawalemoshood19@gmail.com",
+//   "thajudinfolawiyo@gmail.com",
+//   "shehunazeef@gmail.com",
+//   "temmythorpeh27@gmail.com",
+//   "praiseolanipekun3@gmail.com",
+//   "fatimamlawan25@gmail.com",
+//   "aresekinatajike@gmail.com",
+//   "musaabubakaridowu5@gmail.com",
+//   "adenigbamayowa2004@gmail.com",
+//   "funmheelahyo63@gmail.com",
+//   "shadelawal37@gmail.com",
+//   "abdulfatahomore@gmail.com",
+//   "opeyemiomotosho289@gmail.com",
+//   "biogeraabdullahi@gmail.com",
+//   "joyceujuudeme@gmail.com",
+//   "ismailolayinka88mubarak@gmail.com",
+//   "ajayimade1@gmail.com",
+//   "toyeebdurojaiye333@gmail.com",
+//   "abdullateef.adegoke@gmail.com",
+//   "fadoyinblessing@gmail.com",
+//   "lawaladekola49@gmail.com",
+//   "rajitoibatadebola@gmail.com",
+//   "Abdulrahmansalihu09@gmail.com",
+//   "abdullateef.adegoke@gmail.com",
+//   "olamideibrahim511@gmail.com",
+//   "toyeebayodimejy@gmail.com",
+//   "ilawal667@gmail.com",
+//   "hlatifat.hl@gmail.com",
+//   "zinarexn@gmail.com",
+//   "fadipe.john@gmail.com",
+//   "Onaolapo643@yahoo.com",
+//   "Abdulrahmanyahaya94@gmail.com",
+//   "habeebullahib23@gmail.com",
+//   "thajudinfolawiyo@gmail.com",
+//   "flexiee.olo@gmail.com",
+//   "Ameenuyereema15@gmail.com",
+//   "abdullateef.adegoke@gmail.com",
+//   "muhammadbellooloriegbe@gmail.com",
+//   "sanusimoshoodabiola@gmail.com",
+//   "e.damilare19@gmail.com",
+//   "hikmahayinla@gmail.com",
+//   "abdulraheemaishat395@gmail.com",
+//   "idrisabdulganiyishola@gmail.com",
+//   "thajudinfolawiyo@gmail.com",
+//   "abdulaziyzjamiuopeyemi02@gmail.com",
+//   "olawale16644@gmail.com",
+//   "wisdomapeh12@gmaail.com",
+//   "abdul2titilayo2@gmail.com",
+//   "abdurrafiusalahudeen@gmail.com",
+//   "abdullateef_jamiu@yahoo.com",
+//   "kahmederubu@gmail.com",
+//   "amookhadijat@yahoo.com",
+//   "olumidesimeon92@gmail.com",
+//   "flexiee.olo@gmail.com",
+//   "gafarbigboy@gmail.com"
+// ];
+
+// const arrayB = [
+//   "ibrahimhosny360@gmail.com",
+//   "johnmuhammed231@gmail.com",
+//   "ifekunola@gmail.com",
+//   "sulymanibraheem6@gmail.com",
+//   "ajayimade1@gmail.com",
+//   "olatunjifasasi@gmail.com",
+//   "adebayobolarinwa29@gmail.com",
+//   "johnmuhammed231@gmail.com",
+//   "khaleelshot@gmail.com",
+//   "bolakaleshehu@gmail.com",
+//   "abdussalama142@gmail.com",
+//   "adamasani@gmail.com",
+//   "koladesowunmi62@gmail.com",
+//   "skddkdh@gmail.com",
+//   "muhdabdullahi000@gmail.com",
+//   "olamideibrahim511@gmail.com",
+//   "mubarakawwal655@gmail.com",
+//   "olawale16644@gmail.com",
+//   "olawalemoshood19@gmail.com",
+//   "thajudinfolawiyo@gmail.com",
+//   "temmythorpeh27@gmail.com",
+//   "praiseolanipekun3@gmail.com",
+//   "fatimamlawan25@gmail.com",
+//   "funmheelahyo63@gmail.com",
+//   "shadelawal37@gmail.com",
+//   "abdulfatahomore@gmail.com",
+//   "opeyemiomotosho289@gmail.com",
+//   "joyceujuudeme@gmail.com",
+//   "ismailolayinka88mubarak@gmail.com",
+//   "ajayimade1@gmail.com",
+//   "toyeebdurojaiye333@gmail.com",
+//   "abdullateef.adegoke@gmail.com",
+//   "fadoyinblessing@gmail.com",
+//   "lawaladekola49@gmail.com",
+//   "Abdulrahmansalihu09@gmail.com",
+//   "abdullateef.adegoke@gmail.com",
+//   "olamideibrahim511@gmail.com",
+//   "toyeebayodimejy@gmail.com",
+//   "ilawal667@gmail.com",
+//   "hlatifat.hl@gmail.com",
+//   "zinarexn@gmail.com",
+//   "Onaolapo643@yahoo.com",
+//   "Abdulrahmanyahaya94@gmail.com",
+//   "habeebullahib23@gmail.com",
+//   "thajudinfolawiyo@gmail.com",
+//   "Ameenuyereema15@gmail.com",
+//   "abdullateef.adegoke@gmail.com",
+//   "sanusimoshoodabiola@gmail.com",
+//   "e.damilare19@gmail.com",
+//   "hikmahayinla@gmail.com",
+//   "abdulraheemaishat395@gmail.com",
+//   "idrisabdulganiyishola@gmail.com",
+//   "thajudinfolawiyo@gmail.com",
+//   "olawale16644@gmail.com",
+//   "wisdomapeh12@gmaail.com",
+//   "abdurrafiusalahudeen@gmail.com",
+//   "abdullateef_jamiu@yahoo.com",
+//   "olumidesimeon92@gmail.com",
+//   "gafarbigboy@gmail.com"
+// ];
+
+// const uniqueToA = arrayA.filter(email => !arrayB.includes(email));
+// const uniqueToB = arrayB.filter(email => !arrayA.includes(email));
+
+// // Combine the results to get emails not common to both
+// const notCommonEmails = [...uniqueToA, ...uniqueToB];
+
+// console.log("Emails not common to both arrays:", notCommonEmails);
 
 const Page = () => {
   const [enrollments, setEnrollments] = useState([]);
