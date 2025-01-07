@@ -142,7 +142,7 @@ const DashboardComp = () => {
               "&:hover": {
                 backgroundColor: "#f5f5f5", // Light grey color on hover
                 cursor: "pointer", // Change cursor to pointer to indicate it's clickable
-                color:'black'
+                color: "black",
               },
             }}
           >
@@ -155,7 +155,9 @@ const DashboardComp = () => {
                 ? "half funded"
                 : enrollment.category}
             </Typography>
-            <Typography>{enrollment.course}</Typography>
+            <Typography sx={{ textTransform: "capitalize" }}>
+              {enrollment.course}
+            </Typography>
             <Typography>
               {enrollment.state === "Federal Capital Territory"
                 ? "FCT"
