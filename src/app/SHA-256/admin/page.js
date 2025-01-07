@@ -1,7 +1,12 @@
 import React from "react";
+import Dashboard from "@/app/component/Dashboard";
 
 const page = () => {
-  return <div>This is the admin page</div>;
+  return (
+    <>
+      <Dashboard />
+    </>
+  );
 };
 
 export default page;
