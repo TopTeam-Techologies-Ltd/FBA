@@ -141,8 +141,8 @@ export default function EnrollForm({ setOpen }) {
             <option value="" disabled>
               Select Course of choice
             </option>
-            <option value="Cybersecurity">Cybersecurity</option>
-            <option value="Software development">Software Development</option>
+            <option value="Cybersecurity" disabled>Cybersecurity</option>
+            <option value="Software development" disabled>Software Development</option>
             <option value="Data Analyst">Data Analyst</option>
             <option value="soc">Security Operation Analyst</option>
             <option value="cloud-azure">Cloud computing with azure</option>
@@ -152,7 +152,7 @@ export default function EnrollForm({ setOpen }) {
             <option value="devops" disabled>
               Devops
             </option>
-            <option value="cloud-azure-intermediate">
+            <option value="cloud-azure-intermediate" disabled>
               Cloud computing with azure (Intermediate level)
             </option>
           </select>
