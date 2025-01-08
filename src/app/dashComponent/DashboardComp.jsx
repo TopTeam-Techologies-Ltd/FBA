@@ -5,6 +5,8 @@ import { getEnrollment } from "../models/getEnrollment";
 import { Box, Typography, IconButton, TextField } from "@mui/material";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { formatDate } from "../models/utils";
+import SortedDownLoadMenu from "../component/SortedDownloadMenu";
+import ViewApplicantsDetails from "../component/ViewApplicantsDetails";
 
 const DashboardComp = () => {
   const [enrollments, setEnrollments] = useState([]);
@@ -13,6 +15,16 @@ const DashboardComp = () => {
   const [categoryFilter, setCategoryFilter] = useState(null);
   const [dateFilter, setDateFilter] = useState("asc");
   const [searchQuery, setSearchQuery] = useState("");
+  const [open, setOpen] = useState(false);
+  const [selectedEnrollment, setSelectedEnrollment] = useState(null); // New state for selected enrollment
+  const handleOpen = (enrollment) => {
+    setSelectedEnrollment(enrollment); // Set the selected enrollment
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedEnrollment(null); // Clear the selected enrollment
+  };
 
   async function fetchData() {
     setIsLoading(true);
@@ -40,21 +52,18 @@ const DashboardComp = () => {
 
   const applyFilters = () => {
     let filteredData = [...enrollments];
-
     // Filter by search query (Full Name)
     if (searchQuery) {
       filteredData = filteredData.filter((enrollment) =>
         enrollment.fullName.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
-
     // Filter by category
     if (categoryFilter) {
       filteredData = filteredData.filter(
         (enrollment) => enrollment.category === categoryFilter
       );
     }
-
     // Filter by registration date (ascending or descending)
     if (dateFilter === "asc") {
       filteredData = filteredData.sort(
@@ -75,6 +84,13 @@ const DashboardComp = () => {
 
   return (
     <Box sx={{ width: "100%", padding: 2 }}>
+      <div className="flex justify-center items-center my-6">
+        <div className="flex items-center gap-2">
+          <p className="text-2xl font-medium">Applicants Enrollment List</p>
+          <SortedDownLoadMenu enrollments={enrollments} />
+        </div>
+      </div>
+
       {/* Search Bar */}
       <Box sx={{ marginBottom: 2 }}>
         <TextField
@@ -131,40 +147,51 @@ const DashboardComp = () => {
         <Typography>No result found</Typography>
       ) : (
         filteredEnrollments.map((enrollment, index) => (
-          <Box
-            key={enrollment.id}
-            sx={{
-              display: "grid",
-              gridTemplateColumns: "1fr 2fr 2fr 2fr 1fr 2fr",
-              padding: "15px",
-              marginBottom: "10px",
-              borderBottom: "1px solid #ccc",
-              "&:hover": {
-                backgroundColor: "#f5f5f5", // Light grey color on hover
-                cursor: "pointer", // Change cursor to pointer to indicate it's clickable
-                color: "black",
-              },
-            }}
-          >
-            <Typography>{index + 1}</Typography> {/* S/N (serial number) */}
-            <Typography sx={{ textTransform: "capitalize" }}>
-              {enrollment.fullName}
-            </Typography>
-            <Typography>
-              {enrollment.category === "half fundde"
-                ? "half funded"
-                : enrollment.category}
-            </Typography>
-            <Typography sx={{ textTransform: "capitalize" }}>
-              {enrollment.course}
-            </Typography>
-            <Typography>
-              {enrollment.state === "Federal Capital Territory"
-                ? "FCT"
-                : enrollment.state}
-            </Typography>
-            <Typography>{formatDate(enrollment.createdAt)}</Typography>
-          </Box>
+          <>
+            <Box
+              onClick={() => handleOpen(enrollment)}
+              key={enrollment.id}
+              sx={{
+                display: "grid",
+                gridTemplateColumns: "1fr 2fr 2fr 2fr 1fr 2fr",
+                padding: "15px",
+                marginBottom: "10px",
+                borderBottom: "1px solid #ccc",
+                "&:hover": {
+                  backgroundColor: "whitesmoke", // Light grey color on hover
+                  cursor: "pointer", // Change cursor to pointer to indicate it's clickable
+                  color: "black",
+                },
+              }}
+            >
+              <Typography>{index + 1})</Typography> {/* S/N (serial number) */}
+              <Typography sx={{ textTransform: "capitalize", width: "100%" }}>
+                {enrollment.fullName}
+              </Typography>
+              <Typography>
+                {enrollment.category === "half fundde"
+                  ? "half funded"
+                  : enrollment.category}
+              </Typography>
+              <Typography sx={{ textTransform: "capitalize" }}>
+                {enrollment.course}
+              </Typography>
+              <Typography>
+                {enrollment.state === "Federal Capital Territory"
+                  ? "FCT"
+                  : enrollment.state}
+              </Typography>
+              <Typography>{formatDate(enrollment.createdAt)}</Typography>
+            </Box>
+            {/* Conditionally render the modal for the selected enrollment */}
+            {selectedEnrollment && selectedEnrollment.id === enrollment.id && (
+              <ViewApplicantsDetails
+                open={open}
+                handleClose={handleClose}
+                enrollment={selectedEnrollment}
+              />
+            )}
+          </>
         ))
       )}
     </Box>
