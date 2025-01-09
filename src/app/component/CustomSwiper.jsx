@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 // Import required modules
 import { Navigation } from "swiper/modules";
-import FirstCohort from "./firstCohort";
+import FirstCohort from "./FirstCohort";
 import SecondCohort from "./SecondCohort";
 const CustomSwiper = () => {
   return (
