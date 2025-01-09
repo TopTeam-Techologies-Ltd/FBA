@@ -91,7 +91,7 @@ const SecondCohort = () => {
             <div className="w-full flex justify-center items-center">
               <div className="text-xs text-blue-300">
                 <PriorityHighIcon />
-                Registration opens tomorrow!
+                Registration opens in a day!
               </div>
             </div>
             <div>
