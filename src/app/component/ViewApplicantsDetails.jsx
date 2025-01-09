@@ -51,6 +51,9 @@ export default function ViewApplicantsDetails({
             <div>
               <strong>State:</strong> {enrollment.state}
             </div>
+            <div>
+              <strong>State:</strong> {enrollment.phoneNumber}
+            </div>
             <br />
             <br />
             <div className="text-justify">
