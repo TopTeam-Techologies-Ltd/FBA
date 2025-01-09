@@ -4,7 +4,7 @@ import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 // Import required modules
-import { Navigation } from "swiper/modules";
+import { Navigation } from " swiper/modules";
 import FirstCohort from "./FirstCohort";
 import SecondCohort from "./SecondCohort";
 const CustomSwiper = () => {
