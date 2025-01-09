@@ -6,12 +6,12 @@ import FocusArea from "./component/FocusArea";
 import TechSkills from "./component/TechSkills";
 import OurApproach from "./component/OurApproach";
 import Footer from "./component/Footer";
-import PromotionModal from "./component/PromotionModal";
+// import PromotionModal from "./component/PromotionModal";
 
 export default function Home() {
   return (
     <>
-      <PromotionModal />
+      {/* <PromotionModal /> */}
       <Navbar />
       <HeroSection />
       <AboutUs />

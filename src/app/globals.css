@@ -17,3 +17,14 @@ body {
 .css-ijwub5-MuiTypography-root {
   display: none;
 }
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  color: whitesmoke;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: 'prev';
+  color: whitesmoke;
+}
