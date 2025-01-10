@@ -108,12 +108,7 @@ export default function EnrollForm({ setOpen }) {
         <h1 className="text-center mb-6 p-2 bg-[#027839] text-white font-semibold rounded-md">
           Kindly Fill in the Information Below
         </h1>
-        <div className="flex items-center justify-center mb-6">
-          <PriorityHighIcon sx={{ color: "red" }} />
-          <span className="text-sm text-red-500">
-            Allocation for fully funded scholarships is currently at capacity.
-          </span>
-        </div>
+     
         <div className="flex flex-col gap-4">
           {/* Category Dropdown */}
           <select
@@ -234,3 +229,12 @@ export default function EnrollForm({ setOpen }) {
     </>
   );
 }
+
+
+
+// <div className="flex items-center justify-center mb-6">
+// <PriorityHighIcon sx={{ color: "red" }} />
+// <span className="text-sm text-red-500">
+//   Allocation for fully funded scholarships is currently at capacity.
+// </span>
+// </div>
