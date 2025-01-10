@@ -122,12 +122,8 @@ export default function EnrollForm({ setOpen }) {
             required
             className="p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#33af67]"
           >
-            <option value="" disabled>
-              Select Category
-            </option>
-            <option value="full funded" disabled>
-              Full Funded Scholarship
-            </option>
+            <option value="">Select Category</option>
+            <option value="full funded">Full Funded Scholarship</option>
             <option value="half fundde">Partly Funded Scholarship</option>
           </select>
 
@@ -138,21 +134,15 @@ export default function EnrollForm({ setOpen }) {
             required
             className="p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#33af67]"
           >
-            <option value="" disabled>
-              Select Course of choice
-            </option>
-            <option value="Cybersecurity" disabled>Cybersecurity</option>
-            <option value="Software development" disabled>Software Development</option>
+            <option value="">Select Course of choice</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+            <option value="Software development">Software Development</option>
             <option value="Data Analyst">Data Analyst</option>
             <option value="soc">Security Operation Analyst</option>
             <option value="cloud-azure">Cloud computing with azure</option>
-            <option value="cloud-aws" disabled>
-              Cloud computing with aws
-            </option>
-            <option value="devops" disabled>
-              Devops
-            </option>
-            <option value="cloud-azure-intermediate" disabled>
+            <option value="cloud-aws">Cloud computing with aws</option>
+            <option value="devops">Devops</option>
+            <option value="cloud-azure-intermediate">
               Cloud computing with azure (Intermediate level)
             </option>
           </select>
@@ -164,7 +154,7 @@ export default function EnrollForm({ setOpen }) {
             required
             className="p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#33af67]"
           >
-            <option value="" disabled>
+            <option value="">
               Are you following us on all social media platforms?
             </option>
             <option value="yes">yes</option>
@@ -202,9 +192,7 @@ export default function EnrollForm({ setOpen }) {
             required
             className="p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#33af67]"
           >
-            <option value="" disabled>
-              State
-            </option>
+            <option value="">State</option>
             {statesInNigeria.map((stateName) => (
               <option key={stateName} value={stateName}>
                 {stateName}

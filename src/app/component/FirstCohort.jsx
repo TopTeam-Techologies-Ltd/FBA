@@ -81,19 +81,13 @@ const FirstCohort = () => {
                   <p>Cloud Computing with Azure</p>
                 </li>
               </ul>
-              <ScholarshipModal />
             </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <div className="w-full flex justify-center items-center">
-              <div className="text-xs text-[#FFD700]">
-                <PriorityHighIcon />
-                Registration ends in a Day, Hurry!
-              </div>
-            </div>
-            <div>
-              <ShiftingCountdown />
-            </div>
+          <div className="flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-4 shadow-lg">
+            <PriorityHighIcon className="text-yellow-300 text-3xl animate-pulse" />
+            <p className="text-white text-lg font-semibold tracking-wide">
+              This program is currently in session. Stay tuned!
+            </p>
           </div>
         </div>
       </div>

@@ -23,10 +23,10 @@ const CustomSwiper = () => {
       }}
     >
       <SwiperSlide>
-        <FirstCohort />
+        <SecondCohort />
       </SwiperSlide>
       <SwiperSlide>
-        <SecondCohort />
+        <FirstCohort />
       </SwiperSlide>
     </SwiperComponent>
   );
