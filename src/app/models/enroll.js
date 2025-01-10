@@ -12,7 +12,7 @@ export async function enrollscholarship(
   course,
   following
 ) {
-  const postsCollection = collection(db, "cohort2 ");
+  const postsCollection = collection(db, "cohort2");
 
   try {
     // Attempt to add a new document to Firebase Firestore

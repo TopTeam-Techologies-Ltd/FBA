@@ -210,7 +210,7 @@ const downloadCSV = (data) => {
 const Page = () => {
   const [enrollments, setEnrollments] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  console.log(enrollments);
   // Define fetchData outside of useEffect so it can be reused
   async function fetchData() {
     setIsLoading(true);
@@ -244,6 +244,8 @@ const Page = () => {
     );
     return { topCourse, topState };
   };
+
+  
   const result = getHighestApplications(enrollments);
 
   // const uncategorized = enrollments.filter(
