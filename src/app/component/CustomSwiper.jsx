@@ -9,6 +9,7 @@ import "swiper/css/autoplay";
 
 import FirstCohort from "./FirstCohort";
 import SecondCohort from "./SecondCohort";
+import ReachOutProgram from "./ReachOutProgram";
 
 const CustomSwiper = () => {
   return (
@@ -28,6 +29,9 @@ const CustomSwiper = () => {
       <SwiperSlide>
         <FirstCohort />
       </SwiperSlide>
+      {/* <SwiperSlide>
+        <ReachOutProgram />
+      </SwiperSlide> */}
     </SwiperComponent>
   );
 };

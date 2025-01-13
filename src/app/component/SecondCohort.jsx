@@ -7,8 +7,6 @@ import {
   CloudUpload,
 } from "@mui/icons-material";
 import ScholarshipModal from "./ScholarshipModal";
-import PriorityHighIcon from "@mui/icons-material/PriorityHigh";
-import ShiftingCountdown from "./Counter";
 
 const SecondCohort = () => {
   return (
@@ -41,7 +39,7 @@ const SecondCohort = () => {
                 >
                   Topteam Technologies Limited,
                 </a>{" "}
-                a Uk based tech giant, we offer digital literacy scholarships
+                a UK-based tech giant, we offer digital literacy scholarships
                 worth over 10 million naira to Nigerians from various regions.
                 The program is divided into:
               </p>

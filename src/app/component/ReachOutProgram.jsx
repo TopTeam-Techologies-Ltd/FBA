@@ -7,10 +7,8 @@ import {
   CloudUpload,
 } from "@mui/icons-material";
 import ScholarshipModal from "./ScholarshipModal";
-import ShiftingCountdown from "./Counter";
-import PriorityHighIcon from "@mui/icons-material/PriorityHigh";
 
-const FirstCohort = () => {
+const ReachOutProgram = () => {
   return (
     <>
       <div className="px-4 py-8 sm:px-6 md:px-2 lg:px-20 xl:px-28">
@@ -25,17 +23,12 @@ const FirstCohort = () => {
               className="rounded-lg shadow-lg mx-auto md:mx-0"
             />
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-2">
-                <h2 className="text-xl font-semibold text-start text-[#F5F5F5]">
-                  Digital Literacy Program{" "}
-                  <span className="font-bold text-2xl text-[#FFD700]">
-                    Cohort 1
-                  </span>
-                </h2>
-                <span className="bg-green-500 p-2 italic text-[#fff] font-medium">
-                  classes are currently ongoing
+              <h2 className="text-xl font-semibold text-start text-[#F5F5F5]">
+                Digital Literacy Program{" "}
+                <span className="font-bold text-2xl text-[#FFD700]">
+                  Cohort 2
                 </span>
-              </div>
+              </h2>
               <p className="text-sm text-[#F5F5F5]">
                 In partnership with{" "}
                 <a
@@ -46,7 +39,7 @@ const FirstCohort = () => {
                 >
                   Topteam Technologies Limited,
                 </a>{" "}
-                a UK-based tech giant, we offer digital literacy scholarships
+                a Uk based tech giant, we offer digital literacy scholarships
                 worth over 10 million naira to Nigerians from various regions.
                 The program is divided into:
               </p>
@@ -86,21 +79,18 @@ const FirstCohort = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CloudUpload className="text-[#f5f5f5]" />
-                  <p>Cloud Computing with Azure</p>
+                  <p>Cloud Computing with Azure and more</p>
                 </li>
               </ul>
             </div>
           </div>
-          {/* <div className="flex items-center p-2 justify-center gap-2 rounded-md bg-gradient-to-r from-green-500 via-yellow-500 to-red-500 md:p-4 shadow-lg">
-            <PriorityHighIcon className="text-yellow-300 text-3xl animate-pulse" />
-            <p className="text-white text-xs md:text-lg font-semibold tracking-wide">
-              This program is currently in session. Stay tuned!
-            </p>
-          </div> */}
+          <div className="flex justify-center">
+            <ScholarshipModal />
+          </div>
         </div>
       </div>
     </>
   );
 };
 
-export default FirstCohort;
+export default ReachOutProgram;
